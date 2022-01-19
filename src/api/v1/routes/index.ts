@@ -1,14 +1,14 @@
 import express, { Router } from 'express';
 import config from '@config/config';
-import converterRoute from './ConverterRoute';
+import htmlToPdfRoute from './HtmlToPdfRoute';
 import { ENVIRONMENT } from '@config/constants';
 
 const router: Router = express.Router();
 
 const defaultRoutes: { path: string; route: Router }[] = [
     {
-        path: '/converter',
-        route: converterRoute,
+        path: '/html-to-pdf',
+        route: htmlToPdfRoute,
     },
 ];
 
