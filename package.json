@@ -1,0 +1,32 @@
+{
+  "name": "html-to-pdf-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --watch 'src/' --exec ts-node -r tsconfig-paths src/index.ts -e ts"
+  },
+  "author": "Felipe Endlich",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.17.2",
+    "helmet": "^5.0.1",
+    "joi": "^17.5.0",
+    "winston": "^3.4.0"
+  },
+  "_moduleAliases": {
+    "@config": "dist/config"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/helmet": "^4.0.0",
+    "@types/joi": "^17.2.3",
+    "@types/winston": "^2.4.4",
+    "dotenv": "^14.2.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.4"
+  }
+}
