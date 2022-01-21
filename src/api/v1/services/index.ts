@@ -1,1 +1,1 @@
-export * as HtmlToPdfService from './HtmlToPdfService';
+export * as HtmlService from './HtmlService';

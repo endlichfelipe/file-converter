@@ -1,1 +1,1 @@
-export * as HtmlToPdfController from './HtmlToPdfController';
+export * as HtmlController from './HtmlController';

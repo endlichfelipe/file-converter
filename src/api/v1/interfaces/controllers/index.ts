@@ -1,1 +1,1 @@
-export * as htmlToPdf from './html-to-pdf';
+export * as html from './html';

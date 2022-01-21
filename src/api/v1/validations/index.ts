@@ -1,1 +1,1 @@
-export * as HtmlToPdfValidation from './HtmlToPdfValidation';
+export * as HtmlValidation from './HtmlValidation';
