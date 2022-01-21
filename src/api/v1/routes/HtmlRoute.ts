@@ -41,6 +41,9 @@ export default router;
  *     responses:
  *       '200':
  *         description: Returns PDF
- *         schema:
- *           type: file
+ *         content:
+ *           application/pdf:
+ *             schema:
+ *               type: string
+ *               format: binary
  */
