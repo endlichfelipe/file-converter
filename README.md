@@ -20,6 +20,7 @@ Make sure you have one of the following libraries installed
 ### Development
 
 Go to the source folder of the project and run one of the following commands
+
 - ```npm run dev```
 - ```yarn dev```
 
