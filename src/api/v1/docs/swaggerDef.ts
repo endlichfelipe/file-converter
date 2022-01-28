@@ -7,10 +7,6 @@ const swaggerDef = {
         title: 'File Converter API',
         version,
         description: 'API for file conversion',
-        contact: {
-            name: 'Felipe Endlich',
-            email: 'endlichfelipe@gmail.com',
-        },
     },
     servers: [
         {

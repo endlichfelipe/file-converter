@@ -5,20 +5,19 @@ import { ENVIRONMENT } from './constants';
 dotenv.config();
 
 const envVarsSchema = Joi.object({
-    NODE_ENV: Joi.string()
-        .valid(
-            ENVIRONMENT.DEVELOPMENT,
-            ENVIRONMENT.PRODUCTION,
-            ENVIRONMENT.TEST,
-            ENVIRONMENT.PROVISION
-        )
-        .default('development'),
+    NODE_ENV: Joi.string().required(),
+    // Joi is not translating to JS.
+    // valid(
+    //     ENVIRONMENT.DEVELOPMENT,
+    //     ENVIRONMENT.PRODUCTION,
+    //     ENVIRONMENT.TEST,
+    //     ENVIRONMENT.PROVISION
+    // )
+    //.default('development'),
     PORT: Joi.number().default(3000),
 }).unknown();
 
-const { value: envVars, error } = envVarsSchema
-    .prefs({ errors: { label: 'key' } })
-    .validate(process.env);
+const { value: envVars, error } = envVarsSchema.prefs({ errors: { label: 'key' } }).validate(process.env);
 
 if (error) throw new Error(`Config validation error: ${error.message}`);
 
