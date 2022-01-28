@@ -5,6 +5,7 @@ File converter is a API to deal with file conversion
 ## Instalation
 
 Go to the source folder of the project and run one of the following commands
+
 - ```npm install```
 - ```yarn```
 
