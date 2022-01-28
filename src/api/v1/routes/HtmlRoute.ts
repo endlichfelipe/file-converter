@@ -21,8 +21,8 @@ export default router;
  * @swagger
  * /html/from-url:
  *   post:
- *     summary: Convert html to pdf
- *     description: Convert html to pdf from url
+ *     summary: Convert a website to pdf
+ *     description: Convert a website to pdf
  *     tags: [Html Converter]
  *     requestBody:
  *       required: true
@@ -38,6 +38,35 @@ export default router;
  *                 description: Url to convert
  *             examples:
  *               url: https://www.google.com
+ *     responses:
+ *       '200':
+ *         description: Returns PDF
+ *         content:
+ *           application/pdf:
+ *             schema:
+ *               type: string
+ *               format: binary
+ *
+ *
+ * /html/from-code:
+ *   post:
+ *     summary: Convert html code to pdf
+ *     description: Convert html code to pdf
+ *     tags: [Html Converter]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - code
+ *             properties:
+ *               code:
+ *                 type: string
+ *                 description: HTML code to convert
+ *             examples:
+ *               code: <h1>Hello World</h1>
  *     responses:
  *       '200':
  *         description: Returns PDF
